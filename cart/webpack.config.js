@@ -1,7 +1,7 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
-const deps = require("./package.json").dependencies;
+const deps = require('./package.json').dependencies;
 module.exports = {
   output: {
     publicPath: 'http://localhost:3002/',
@@ -48,7 +48,12 @@ module.exports = {
         pdp: 'pdp@http://localhost:3001/remoteEntry.js',
         cart: 'cart@http://localhost:3002/remoteEntry.js',
       },
-      exposes: {},
+      exposes: {
+        './cart': './src/cart.js',
+        './Login': './src/Login.jsx',
+        './MiniCart': './src/MiniCart.jsx',
+        './CartContent': './src/CartContent.jsx',
+      },
       shared: {
         ...deps,
         react: {

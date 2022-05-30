@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import { currency } from 'home/products';
 import { jwt, login } from './cart';
 import Login from './Login';
+import MiniCart from './MiniCart';
 
 export default function CartContent() {
   //   const [items, setItems] = useState([]);
@@ -20,8 +21,9 @@ export default function CartContent() {
 
   return (
     <>
-      {token}
+      {/* {token} */}
       <Login />
+      <MiniCart />
       {/* <div className="my-10 grid grid-cols-4 gap-5">
         {items.map((item) => (
           <React.Fragment key={item.id}>
