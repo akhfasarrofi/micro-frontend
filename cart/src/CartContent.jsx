@@ -1,30 +1,19 @@
 import React, { useState, useEffect } from 'react';
-// import { cart, clearCart } from 'cart/cart';
-// import { currency } from 'home/products';
-import { jwt, login } from './cart';
-import Login from './Login';
-import MiniCart from './MiniCart';
+
+import { cart, clearCart } from 'cart/cart';
+import { currency } from 'home/products';
 
 export default function CartContent() {
-  //   const [items, setItems] = useState([]);
-  const [token, setToken] = useState('');
+  const [items, setItems] = useState([]);
 
-  //   useEffect(
-  //     () => cart.subscribe((value) => setItems(value?.cartItems ?? [])),
-  //     []
-  //   );
-
-  useEffect(() => {
-    // login('sally', '123');
-    return jwt.subscribe((val) => setToken(val ?? ''));
-  }, []);
+  useEffect(
+    () => cart.subscribe((value) => setItems(value?.cartItems ?? [])),
+    []
+  );
 
   return (
     <>
-      {/* {token} */}
-      <Login />
-      <MiniCart />
-      {/* <div className="my-10 grid grid-cols-4 gap-5">
+      <div className="my-10 grid grid-cols-4 gap-5">
         {items.map((item) => (
           <React.Fragment key={item.id}>
             <div>{item.quantity}</div>
@@ -62,7 +51,7 @@ export default function CartContent() {
             </button>
           </div>
         </div>
-      )} */}
+      )}
     </>
   );
 }
