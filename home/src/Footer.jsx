@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default function Footer() {
   return (
     <div className="p-5 bg-blue-500 text-white text-3xl font-bold">
-      Only the Best Spinners
+      Only The Best Spinners
     </div>
   );
 }

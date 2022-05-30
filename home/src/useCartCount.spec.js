@@ -1,10 +1,10 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from "@testing-library/react-hooks";
 
-import { useCartCount } from './useCartCount';
+import { useCartCount } from "./useCartCount";
 
 let callback = () => {};
 
-jest.mock('cart/cart', () => ({
+jest.mock("cart/cart", () => ({
   cart: {
     cartItems: [],
     subscribe: (cb) => {
@@ -13,13 +13,13 @@ jest.mock('cart/cart', () => ({
   },
 }));
 
-describe('useCartCount', () => {
-  it('should return cart count', () => {
+describe("useCartCount", () => {
+  it("should return cart count", () => {
     const { result } = renderHook(() => useCartCount());
     expect(result.current).toBe(0);
   });
 
-  it('should return cart count', () => {
+  it("should return cart count", () => {
     const { result } = renderHook(() => useCartCount());
     act(() => {
       callback({ cartItems: [{ id: 1 }] });

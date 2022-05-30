@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
 
-import { getProductById, currency } from 'home/products';
-import placeAddToCart from 'addtocart/placeAddToCart';
+import { getProductById, currency } from "home/products";
+import placeAddToCart from "addtocart/placeAddToCart";
 
 export default function PDPContent() {
   const { id } = useParams();

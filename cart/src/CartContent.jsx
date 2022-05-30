@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { cart, clearCart } from 'cart/cart';
-import { currency } from 'home/products';
+import { cart, clearCart } from "cart/cart";
+import { currency } from "home/products";
 
 export default function CartContent() {
   const [items, setItems] = useState([]);

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { login, useLoggedIn } from './cart';
+import { login, useLoggedIn } from "./cart";
 
 export default function Login() {
   const loggedIn = useLoggedIn();
   const [showLogin, setShowLogin] = useState(false);
 
-  const [username, setUsername] = useState('sally');
-  const [password, setPassword] = useState('123');
+  const [username, setUsername] = useState("sally");
+  const [password, setPassword] = useState("123");
 
   if (loggedIn) return null;
 
@@ -21,7 +21,7 @@ export default function Login() {
           className="absolute p-5 border-4 border-blue-800 bg-white rounded-xl text-black"
           style={{
             width: 300,
-            top: '2rem',
+            top: "2rem",
             left: -250,
           }}
         >
@@ -40,10 +40,7 @@ export default function Login() {
           />
           <button
             className="bg-green-900 text-white py-2 px-5 rounded-md text-sm mt-5"
-            onClick={() => {
-              login(username, password);
-              setShowLogin(false);
-            }}
+            onClick={() => login(username, password)}
             id="loginbtn"
           >
             Login
