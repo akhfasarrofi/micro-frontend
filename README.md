@@ -1,4 +1,4 @@
-<h1 align="center"> Micro Fronend 🔥 </h1> 
+<h1 align="center"> Micro Frontend 🔥 </h1> 
 <h3 align="center"> Reusable Component, Routing Cross Module <br /> Sharing JWT </h3>
 
 <p align="center">
